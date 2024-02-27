@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.example.indianicpractical.ui.splash.SplashFragment"
+        android:label="fragment_splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_mapFragment"
+            app:popUpTo="@id/splashFragment"
+            app:popUpToInclusive="true"
+            app:destination="@id/mapFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.example.indianicpractical.ui.map.MapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map">
+        <action
+            android:id="@+id/action_mapFragment_to_weatherInfoFragment"
+            app:destination="@id/weatherInfoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/weatherInfoFragment"
+        android:name="com.example.indianicpractical.ui.weatherinfo.WeatherInfoFragment"
+        android:label="fragment_weather_inforagment"
+        tools:layout="@layout/fragment_weather_inforagment" />
+</navigation>
